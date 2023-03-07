@@ -11,7 +11,7 @@ TEST_CASE("test")
 	REQUIRE(test_config() == true);
 }
 
-TEST_CASE("Verify find_gcd returns accurate result") // test gcd function to ensure correct result returned
+TEST_CASE("Verify find_gcd returns correct result") // test gcd function to ensure correct result returned
 {
 	REQUIRE(find_gcd(15,25) == 5);
 }

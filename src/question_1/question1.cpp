@@ -42,12 +42,11 @@ int find_gcd(int num1, int num2) // definition for find gcd function
 
 void menu() // display a menu that allows the user to continue or terminate program
 {
+    auto choice = 'y';
     do
     {
-        auto choice = 'y';
         get_input();
     } while (choice == 'y');
-    
 }
 
 void get_input() // capture input from user 
@@ -58,7 +57,7 @@ void get_input() // capture input from user
     cin>>num1;
     cout<<"Please enter another number between 1 and 200:\t";
     cin>>num2;
-    handle_input();
+    handle_input(num1, num2);
 }
 
 void handle_input(int num1, int num2) // process input and output correct response to user
