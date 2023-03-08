@@ -1,5 +1,5 @@
 #include "question2.h"
-#inlcude <iostream> // include input output stream
+#include <iostream> // include input output stream
 
 using std::cout; using std::cin; // specify which library to use cin and cout from
 
