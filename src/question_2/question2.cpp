@@ -48,10 +48,10 @@ void get_input() // prompt user for input to pass to get_earned_points function
         else // if sold < 1, display error message and rerun program
         {
             std::cout<<"Invalid entry....Please enter a value greater than 1...\n\n";
-            get_input(); // run program again
+            get_input(); // run program again now that user understands what values are invalid
         }
-        std::cout<<"CONGRATULATIONS! You earned "<<points<<" number of points based upon selling "<<sold<<" number of widgets this month!\n\n";
-        std::cout<<"Would you like to run the program again? Enter Y for yes. Enter any other key to end the program.\n";
+        std::cout<<"Points earned:\t"<<points<<"\n\n";
+        std::cout<<"Would you like to run the program again?\nEnter Y for yes. Enter any other key to end the program.\n";
         std::cin>>choice;
     } while(choice == 'Y' || choice == 'y'); // continue running program as long as user wishes to continue
 }  
