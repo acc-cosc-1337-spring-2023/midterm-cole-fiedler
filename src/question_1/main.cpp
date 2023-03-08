@@ -5,6 +5,6 @@ using std::cout; using std::cin;
 
 int main()
 {
-    menu();
+    get_input();
     return 0;
 }

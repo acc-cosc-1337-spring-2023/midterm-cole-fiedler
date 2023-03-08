@@ -40,36 +40,34 @@ int find_gcd(int num1, int num2) // definition for find gcd function
     return a; // return gcd
 }
 
-void menu() // display a menu that allows the user to continue or terminate program
-{
-    auto choice = 'y';
-    do
-    {
-        get_input();
-    } while (choice == 'y');
-}
-
-void get_input() // capture input from user 
+void get_input() // prompt user for input and capture input from user 
 {
     int num1 = 0;
     int num2 = 0;
-    cout<<"Please enter a number between from 1 to 200:\t";
-    cin>>num1;
-    cout<<"Please enter another number between 1 and 200:\t";
-    cin>>num2;
-    handle_input(num1, num2);
+    auto choice = ' ';
+    do // run menu at least once
+    {
+        cout<<"Please enter a number between from 1 to 200:\t";
+        cin>>num1;
+        cout<<"Please enter another number between 1 and 200:\t";
+        cin>>num2;
+        handle_input(num1, num2);
+        cout<<"Would you like to continue the program? Enter y to continue, enter any other key to end....\n";
+        cin>>choice;
+    } while (choice == 'y' || choice == 'Y'); // test condition after running menu to see if user wants to run again
 }
 
-void handle_input(int num1, int num2) // process input and output correct response to user
+void handle_input(int num1, int num2) // process user input and output correct response
 {
     auto gcd = 0;
     while(num1 >= 1 && num1 <= 200 && num2 >= 1 && num2<= 200)
     {
-        gcd = find_gcd(num1, num2);
+        gcd = find_gcd(num1, num2); // assign gcd variable to return result of find_gcd
+        cout<<"The greatest common divisor of "<<num1<<" and "<<num2<<" is "<<gcd<<"\n\n"; // output gcd of num1 and num2
     }
-    if(num1 < 1 || num1 > 200 || num2 < 1 || num2 > 200)
+    if(num1 < 1 || num1 > 200 || num2 < 1 || num2 > 200) // validate both numbers are in range 1 - 200
     {
-        cout<<"Invalid entry, please try again....";
-        get_input();
+        cout<<"Invalid entry, please try again...."; // display error
+        get_input(); // invalid entry calls get_input to allow user to retry
     }
 }
