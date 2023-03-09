@@ -14,5 +14,10 @@ TEST_CASE("test")
 
 TEST_CASE("Verify that roll die function returns a random number between 1 and 6")
 {
-	REQUIRE(roll_die(
+	auto die_roll = 0; // initialize die_roll variable within test case
+	die_roll = roll_die(); // assign die_roll to return value of roll_die
+
+	REQUIRE((die_roll) > 0); // red green go
+	REQUIRE((die_roll) < 7); // red green go
 }
+// 4 assertions pass in 3 cases

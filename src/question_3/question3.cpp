@@ -29,9 +29,9 @@ void get_input() // get input function uses no parameters and returns void
         for(int i=0; i<11; i++) // loop iterates 10 times and calls roll_die fn
         {   
             die_roll = roll_die();
-            std::cout<<die_roll<<"\n";
+            std::cout<<die_roll<<"\t";
         }
-        std::cout<<"Would you like to roll the dice again?\nEnter y to roll again, enter any other key to exit...\n";
+        std::cout<<"\n\nWould you like to roll the dice again?\nEnter y to roll again, enter any other key to exit...\t";
         std::cin>>choice;
     } while(choice == 'Y' || choice == 'y'); // continue rolling dice 10 times as long as user wishes to continue
 }
