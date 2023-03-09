@@ -14,7 +14,8 @@ TEST_CASE("test")
 
 TEST_CASE("Verify find_gcd returns correct result") // test gcd function to ensure correct result returned
 {
-	REQUIRE(find_gcd(15,25) == 5); 
-	REQUIRE(find_gcd(16,32) == 16);
-	REQUIRE(find_gcd(159,309) == 3);
+	REQUIRE(find_gcd(15,25) == 5); // red green go
+	REQUIRE(find_gcd(16,32) == 16); // red green go
+	REQUIRE(find_gcd(159,309) == 3); // red green go
 }
+// 5 assertions pass in 3 test cases 

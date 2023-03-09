@@ -41,7 +41,7 @@ void get_input() // prompt user for input to pass to get_earned_points function
         int points = 0; // initalize points variable with 0
         std::cout<<"Please enter the number of widgets sold this month:\t";
         std::cin>>sold; // pass sold to get_earned_points after validating input
-        if(sold > 1) // validate input of sold. if > 1, run get_earned_points
+        if(sold > 0) // validate input of sold. if > 1, run get_earned_points
         {
             points = get_earned_points(sold); // assign return value of get_earned_points to points variable
         }

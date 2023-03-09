@@ -14,6 +14,5 @@ TEST_CASE("test")
 
 TEST_CASE("Verify that roll die function returns a random number between 1 and 6")
 {
-	REQUIRE(roll_die() > 0 && roll_die() < 7); // require roll die function to produce result between 1 and 6
-											   // function iterates 10 times using for loop within a do/while loop
+	REQUIRE(roll_die(
 }

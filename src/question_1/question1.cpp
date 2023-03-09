@@ -60,14 +60,14 @@ void get_input() // prompt user for input and capture input from user
 void handle_input(int num1, int num2) // process user input and output correct response
 {
     auto gcd = 0;
-    while(num1 >= 1 && num1 <= 200 && num2 >= 1 && num2<= 200)
+    if(num1 >= 1 && num1 <= 200 && num2 >= 1 && num2<= 200)
     {
         gcd = find_gcd(num1, num2); // assign gcd variable to return result of find_gcd
         cout<<"The greatest common divisor of "<<num1<<" and "<<num2<<" is "<<gcd<<"\n\n"; // output gcd of num1 and num2
     }
-    if(num1 < 1 || num1 > 200 || num2 < 1 || num2 > 200) // validate both numbers are in range 1 - 200
+    else if(num1 < 1 || num1 > 200 || num2 < 1 || num2 > 200) // validate both numbers are in range 1 - 200
     {
-        cout<<"Invalid entry, please try again...."; // display error
+        cout<<"Invalid entry, please try again....\n"; // display error
         get_input(); // invalid entry calls get_input to allow user to retry
     }
 }
