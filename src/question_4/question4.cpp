@@ -38,9 +38,9 @@ string get_fib_sequence(int num_nums)
     int num1 = 0;
     int num2 = 1;
     int next_num = 0;
-    std::string fib_seq = "           ";
+    std::string fib_seq = " ";
 
-    for(int i = 0; i < num_nums; i++)
+    for(int i = 0; i < num_nums; i++) // this doesnt work
     {
         next_num = num1 + num2;
         fib_seq[i] = next_num;
