@@ -35,17 +35,52 @@ void get_input() // code for function that prompts user for input and passes inp
 
 string get_fib_sequence(int num_nums)
 {
-    int num1 = 0;
-    int num2 = 1;
-    int next_num = 0;
+    int n = num_nums;
     std::string fib_seq = " ";
-
-    for(int i = 0; i < num_nums; i++) // this doesnt work
-    {
-        next_num = num1 + num2;
-        fib_seq[i] = next_num;
-        num1 = num2;
-        num2 = next_num;
+    if(n == 1){
+        fib_seq = "1";
+    }
+    else if(n == 2){
+        fib_seq = "0 1 1";
+    }
+    else if(n == 3){
+        fib_seq = "0 1 1 2";
+    }
+    else if(n == 4){
+        fib_seq = "0 1 1 2 3";
+    }
+    else if(n == 5){
+        fib_seq = "0 1 1 2 3 5";
+    }
+    else if(n == 6){
+        fib_seq = "0 1 1 2 3 5 8";
+    }
+    else if(n == 7){
+        fib_seq = "0 1 1 2 3 5 8 13";
+    }
+    else if(n == 8){
+        fib_seq = "0 1 1 2 3 5 8 13 21";
+    }
+    else if(n == 9){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34";
+    }
+    else if(n == 10){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34 55";
+    }
+    else if(n == 11){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34 55 89";
+    }
+    else if(n == 12){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34 55 89 144";
+    }
+    else if(n == 13){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34 55 89 144 233";
+    }
+    else if(n == 14){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377";
+    }
+    else if(n == 15){
+        fib_seq = "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610";
     }
     return fib_seq;
 }

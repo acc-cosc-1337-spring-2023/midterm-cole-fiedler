@@ -11,25 +11,13 @@ TEST_CASE("test")
 	REQUIRE(test_config() == true);
 }
 
-/*
-TEST_CASE("Verify get fib seq funtion returns proper string seqeunce")
-{
-	auto die_roll = 0; // initialize die_roll variable within test case
-	die_roll = roll_die(); // assign die_roll to return value of roll_die
-	for(int i = 0; i < 15; i++) // write a loop that iterates at least 10 times and validate value return is 1 - 6
-	{
-		REQUIRE((die_roll) > 0); // red green go
-		REQUIRE((die_roll) < 7); // red green go
-	}
-}
-*/
-
 TEST_CASE("Verify get fib seq function returns proper string sequence")
 {
-	int num_nums = 0;
-	std::string fib_seq = get_fib_sequence(num_nums);
-	while(num_nums = 5)
-	{
-		REQUIRE((fib_seq) == "0 1 1 2 3 5");
-	}
+	REQUIRE(get_fib_sequence(5) == "0 1 1 2 3 5"); // red green go
+	REQUIRE(get_fib_sequence(7) == "0 1 1 2 3 5 8 13"); // red green go											  0 1 2 3 4 5 6 <- only 6 values
+														// question 4 on test states get_fib_seq(7) should return 0 1 1 2 3 5 8 
+														// however that only includes 6 values and does not match the fibb pattern
+	REQUIRE(get_fib_sequence(10) == "0 1 1 2 3 5 8 13 21 34 55"); // red green go
+	REQUIRE(get_fib_sequence(12) == "0 1 1 2 3 5 8 13 21 34 55 89 144"); // red green go
 }
+// 6 assertions pass in 3 test cases
